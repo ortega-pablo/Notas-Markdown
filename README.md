@@ -396,6 +396,18 @@ Esto generará una cita con la siguiente forma:
 > - Este es otro elemento de lista dentro de la cita
 >   Este es un texto que contiene **negrita** y _cursiva_
 
+### Tachado
+
+Para colocar texto tachado debemos pone dos símbolo ~ delante y otro detás de la siguiente manera:
+
+```
+Este texto está ~~tachado~~
+```
+Obteniendo:
+
+Este texto está ~~tachado~~
+
+
 ---
 
 ## Listas
@@ -502,6 +514,21 @@ Dentro de una lista podemos colocar diferentes elementos (otra lista, párrafos,
 
 ---
 
+## CheckList
+
+Para generar una checklist podemos hacerlo mediante la siguiente estructura:
+
+```
+- [x] Esta tarea está realizada
+- [ ] Esta no está hecha
+```
+Lo que se verá de la siguiente manera:
+
+- [x] Esta tarea está realizada
+- [ ] Esta no está hecha
+
+---
+
 ## Bloques de código
 
 Para escribir código tenemos diferentes formas dependiendo de qué es lo que queremos dejar expresado.
@@ -564,3 +591,117 @@ const personas = [
     }
 ] 
 ```
+
+---
+
+## Imágenes
+
+Para colocaruna imagen debemos colocar un símbolo de admiracón (cierre)delante, luego entre corchetes ponemos el nombre o una descripciòn de la imagen, finalmente entre paréntesis colocamos la ruta donde está alojada la imagen. Por ejemplo:
+
+```
+![Logo Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/250px-Markdown-mark.svg.png)
+
+```
+
+Lo que nos dará como resultado:
+
+![Logo Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/250px-Markdown-mark.svg.png)
+
+## Separador horizontal
+
+para crear un separador horizontal debemos colocar tres o más asteriscos, guiónes o guiónes bajos. Tener en cuenta que debe colocarse en un renglon aparte como vemos a continuación:
+
+```
+
+***
+
+---
+
+___
+
+```
+Lo que nos dará como resultado:
+
+***
+---
+___
+
+Debemos tener la consideración de dejar un renglón en blanco antes y otro después del separadr horizontal
+
+## Links
+
+Para colocar un link debemos poner entre corchetes el texto que será visualizadoy a continuación el link al que redirigiremos entre paréntesis. También podemos poner una descripción o referencia para cuando hacemos hover sobre el mismo colocándolo dentro del paréntesis, a continuación del link dejando un espacio y colocándolo entre comillas.
+
+```
+Este link nos redireccionará a [google.com](https://www.google.com "Este link nos redireccionará a Google")
+
+```
+
+Este link nos redireccionará a [google.com](https://www.google.com "Este link nos redireccionará a Google")
+
+Por último podemos para colocar una URL o un mail debemos poner el contenido encerrado en paréntesis angulares
+
+```
+<https://URL.deEjemplo.com>
+
+<email@ejemplo.com>
+```
+
+Lo que resultará:
+
+<https://URL.deEjemplo.com>
+
+<email@ejemplo.com>
+
+## Tablas
+
+Para armar una tabla debemos seguir la siguiente estructura:
+
+```
+
+|Encabezado 1   |Encabezado 2   |Encabezado 3   |
+|:---           |:---:          |---:           |
+|Primer fila 1  |Primer fila 2  |Primer fila 3  |
+|Segunda fila 1 |Aegunda fila 2 |Segunda fila 3 |
+|Tercera fila 1 |Tercera fila 2 |Tercera fila 3 |
+
+```
+
+Lo que se verá de la siguiente manera:
+
+|Encabezado 1   |Encabezado 2   |Encabezado 3   |
+|:---           |:---:          |---:           |
+|Primer fila 1  |Primer fila 2  |Primer fila 3  |
+|Segunda fila 1 |Aegunda fila 2 |Segunda fila 3 |
+|Tercera fila 1 |Tercera fila 2 |Tercera fila 3 |
+
+Como podemos observar en el ejemplo anterior podemos asignar la orientación de las columnas. colocando los : a la izquierda orientamos la columna a la izquierda y de la misma forma a la derecha. Para que se vea centrada colocamos : a ambos lados del separador.
+
+A su ves dentro de la tabla podemos estilizar el texto utilizando los formatos de negrita, corsiva y encabezados.
+
+## Emojis
+
+Para colocar un emoji podemos colocar el nombre del mismo entre símbolos de dos puntos como se muestra a continuación:
+
+```
+:smiley:
+```
+
+Con lo que veremos: 
+
+:smiley:
+
+Para colocar emojis podemos consultar la página <https://gist.github.com/rxaviers/7360908>
+
+Sólo debemos tener en cuenta que no todos los lectores de markdown reconocen a los emojis.
+
+## Indices
+
+Para colocar un índice, ya sea superior o inferior podemos hacerlo de la siguiente manera:
+
+```
+H~2~O
+X^2^
+```
+
+También tenemos que tener en cuetna que no todos los lectores de markdown pueden leer este tipo de escritura
