@@ -37,6 +37,7 @@ Equivalente HTML:
 ```
 
 resultado:
+
 # Encabezado nivel 1
 
 Sintaxis Markdown:
@@ -52,6 +53,7 @@ Equivalente HTML:
 ```
 
 Resultará:
+
 ## Encabezado nivel 2
 
 Sintaxis Markdown:
@@ -67,6 +69,7 @@ Equivalente HTML:
 ```
 
 Resultará:
+
 ## Encabezado nivel 3
 
 Sintaxis Markdown:
@@ -82,6 +85,7 @@ Equivalente HTML:
 ```
 
 Resultará:
+
 ## Encabezado nivel 4
 
 Sintaxis Markdown:
@@ -97,6 +101,7 @@ Equivalente HTML:
 ```
 
 Resultará:
+
 ## Encabezado nivel 5
 
 Sintaxis Markdown:
@@ -112,6 +117,7 @@ Equivalente HTML:
 ```
 
 Resultará:
+
 ## Encabezado nivel 6
 
 Alternativamente podemos expresar los encabezados de nivel 1 y 2 agregando debajo del texto cualquier cantidad de caracteres (=) y (-) respectivamente:
@@ -120,15 +126,21 @@ Alternativamente podemos expresar los encabezados de nivel 1 y 2 agregando debaj
 Encabezado de nivel 1
 =====================
 ```
+
 Resultará:
+
 # Encabezado Nivel 1
 
 ```
 Encabezado de nivel 2
 ---------------------
 ```
+
 Resultará:
+
 ## Encabezado Nivel 2
+
+---
 
 ## Párrafos
 
@@ -155,6 +167,8 @@ Este es el primer párrafo
 
 Este es el segundo párrafo
 
+---
+
 ## Salto de línea
 
 Para realizar un salto de línea, debemos terminar el renglón con dos o más espacios:
@@ -162,7 +176,7 @@ Para realizar un salto de línea, debemos terminar el renglón con dos o más es
 Sintaxis Markdown:
 
 ```
-Este es el primer renglón  
+Este es el primer renglón
 Este es el segundo renglón
 ```
 
@@ -176,6 +190,8 @@ Resultará:
 
 Este es el primer renglón  
 Este es el segundo renglón
+
+---
 
 ## Énfasis
 
@@ -222,3 +238,329 @@ po<strong>rció<strong>n
 Resultará:
 
 po**rció**n
+
+### Cursiva
+
+Para escribir texto en cursiva debemos colocar un solo asterisco o guión bajo antes y después de la palabra o frase a resaltar:
+
+Sintaxis Markdown:
+
+```
+Este texto *está en cursiva*
+
+Este texto _está en cursiva_
+```
+
+Equivalente HTML:
+
+```
+Este texto <em>está en negrita<em>
+```
+
+Resultará:
+
+Este texto _está en cursiva_
+
+Este texto _está en cursiva_
+
+Por otro lado, si queremos escribir en cursiva una porción de una palabra, sólo deberíamos usar el método de los asteriscos:
+
+Sintaxis Markdown:
+
+```
+po*rció*n
+```
+
+Equivalente HTML:
+
+```
+po<em>rció<em>n
+```
+
+Resultará:
+
+po*rció*n
+
+### Negrita y cursiva
+
+Para escribir texto en cursiva y negrita a la vez, debemos colocar tres asteriscos o guiónes bajos antes y después de la palabra o frase a resaltar (también se puede combinar 2 asteriscos y un guión bajo o dos guónes bajos y un asterisco):
+
+Sintaxis Markdown:
+
+```
+Este texto ***está en negrita y cursiva***
+
+Este texto ___está en negrita y cursiva___
+
+Este texto __*está en negrita y cursiva*__
+
+Este texto **_está en negrita y cursiva_**
+```
+
+Equivalente HTML:
+
+```
+Este texto <em><strong>está en negrita y cursiva<strong><em>
+
+Este texto <em><strong>está en negrita y cursiva<strong><em>
+
+Este texto <em><strong>está en negrita y cursiva<strong><em>
+
+Este texto <em><strong>está en negrita y cursiva<strong><em>
+```
+
+Resultará:
+
+Este texto **_está en negrita y cursiva_**
+
+Este texto **_está en negrita y cursiva_**
+
+Este texto **_está en negrita y cursiva_**
+
+Este texto **_está en negrita y cursiva_**
+
+Por otro lado, si queremos escribir en cursiva y negrita una porción de una palabra, sólo deberíamos usar el método de los asteriscos:
+
+Sintaxis Markdown:
+
+```
+po***rció***n
+```
+
+Equivalente HTML:
+
+```
+po<em><strong>rció<strong><em>n
+```
+
+Resultará:
+
+po**_rció_**n
+
+---
+
+## Citas
+
+Para colocar una cita debemos colocar un caracter > junto a un espacio delante de la cita
+
+```
+> Esto es una cita
+```
+
+Lo que se verá de la siguiente manera:
+
+> Esto es una cita
+
+Para colocar una cita con más de un párrafo, debemos separarlos mediante el renglón en blanco de colocando el caracter > en todos los renglones:
+
+```
+> Este es el primer párrafo de la cita
+>
+> Este es el segundo párrafo de la cita
+```
+
+Obteniendo:
+
+> Este es el primer párrafo de la cita
+>
+> Este es el segundo párrafo de la cita
+
+Dentro de una cita podemos colocar citas anidadas. En estas citas los niveles se representan colocando un espacio de tabulador de la siguiente manera:
+
+```
+> Esta es una cita
+>> Esta es una cita anidada
+```
+
+Lo que se verá de la siguiente manera:
+
+> Esta es una cita
+>
+> > Esta es una cita anidada
+
+El lenguaje Markdown nos permite a su ves, dar algunos estilos de encabezado y tipo de texto dentro de una cita. Por ejemplo:
+
+```
+> ## Este es un título de nivel 2 dentro de la cita
+>
+> - Este es un elemento de lista dentro de la cita
+> - Este es otro elemento de lista dentro de la cita
+> Este es un texto que contiene **negrita** y _cursiva_
+```
+
+Esto generará una cita con la siguiente forma:
+
+> ## Este es un título de nivel 2 dentro de la cita
+>
+> - Este es un elemento de lista dentro de la cita
+> - Este es otro elemento de lista dentro de la cita
+>   Este es un texto que contiene **negrita** y _cursiva_
+
+---
+
+## Listas
+
+como la palabra lo dice, son utilizadas para enlistar elementos. Las listas pueden ser:
+
+### Ordenadas
+
+Las listas ordenadas se esciben colocando el numero seguido de un punto y un espacio delante de la frase a enlistar. Se debe tener en cuenta que siempre se inician con el número 1
+
+Sintaxis Markdown:
+
+```
+1. Primer elemento
+2. Segundo elemento
+3. Tercer elemento
+```
+
+Equivalente HTML:
+
+```
+<ol>
+    <li>Primer elemento<li>
+    <li>Segundo elemento<li>
+    <li>Tercer elemento<li>
+<ol>
+```
+
+Resultará:
+
+1. Primer elemento
+2. Segundo elemento
+3. Tercer elemento
+
+### Desordenadas
+
+Las listas desordenadas se esciben colocando un guón medio, un símbolo suma o un asterisco, seguido de un punto y un espacio delante de la frase a enlistar. Se debe tener en cuenta que siempre se debe utilizar el mismo símbolo para todos los elementos de la lista
+
+Sintaxis Markdown:
+
+```
+ - Primer elemento
+ - Segundo elemento
+ - Tercer elemento
+
+ + Primer elemento
+ + Segundo elemento
+ + Tercer elemento
+
+ * Primer elemento
+ * Segundo elemento
+ * Tercer elemento
+```
+
+Equivalente HTML:
+
+```
+<ul>
+    <li>Primer elemento<li>
+    <li>Segundo elemento<li>
+    <li>Tercer elemento<li>
+<ul>
+```
+
+Resultará:
+
+- Primer elemento
+- Segundo elemento
+- Tercer elemento
+
+* Primer elemento
+* Segundo elemento
+* Tercer elemento
+
+- Primer elemento
+- Segundo elemento
+- Tercer elemento
+
+Dentro de una lista podemos colocar diferentes elementos (otra lista, párrafos, citas, bloques de código e imágenes). Para dar continuidad al formato de las listas los elementos debemos colocarlos con espacios de tabulación y colocando los renglones en blanco para poder hacer el salto de línea como se ejemplifica a continuacón:
+
+1.  Este es el primer elemento de la lista
+    - Este es un elemento de la lista anidada
+    - Este es otro elemento
+2.  Este es el segundo elemento de la lista, el cual contiene un párrafo
+
+    Este es el párrafo contenido
+
+3.  Este es el tercer elemento de la lista, el cual contiene una cita
+
+    > Esta es la cita contenida
+
+4.  Este es el cuarto elemento de la lista, el cual contiene un bloque de código
+
+    ```
+    <html>
+          <head>
+            <title>Este es el bloque de código</title>
+          </head>
+    ```
+
+5.  Este es el quinto elemento de la lista, el cual contiene el ícono de markdown
+
+    ![Icono de Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/250px-Markdown-mark.svg.png)
+
+---
+
+## Bloques de código
+
+Para escribir código tenemos diferentes formas dependiendo de qué es lo que queremos dejar expresado.
+
+Si queremos escribir sólo una línea de código podemos hacerlo encerrando la línea en backtiks (`)de la siguiente manera:
+
+```
+`Esta es una línea de código`
+```
+
+Pero en caso de que alguna palabra dentro de la lína utilice los backtiks, se debe encerrar la línea en backtiks dobles:
+
+```
+`` Esta es otra `línea` de código``
+```
+
+Estas líneas serán visualizadas de la siqguiente manera:
+
+`Esta es una línea de código`
+
+`` Esta es otra `línea` de código``
+
+Markdown nos permite a la vez, poder escribir bloques de código. Para escribir un bloque de código usamos una terna de backtiks adelante y otra al final del código dejando los backtiks en renglones individuales. También podemos declarar el nombre del lenguaje utilizado colocándolo al lado de los backtiks de apertura para que los editores de código puedan interpretar el mismo. Por ejempleo:
+
+```
+    ```json
+    {
+        "nombre": "Pablo",
+        "apellido": "Ortega"
+    }
+    ```
+```
+Lo que nos dará como resultado:
+
+```json
+{
+    "nombre": "Pablo",
+    "apellido": "Ortega"
+}
+```
+
+O bien, si quisiéramos colocar código javascript:
+
+```
+    ```javascript
+    console.log('Ejemplo de código JavaScript')
+    ```
+```
+Retornando:
+
+```javascript
+const personas = [
+    {
+        nombre: 'Nombre 1',
+        apellido: 'Apellido 1'
+    },
+    {
+        nombre: 'Nombre 2',
+        apellido: 'Apellido 2'
+    }
+] 
+```
